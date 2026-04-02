@@ -6,91 +6,100 @@ const WHATSAPP_URL = 'https://wa.me/5512991153530?text=Ol%C3%A1%2C+Karina%21+Que
 
 const faqs = [
   {
-    pergunta: 'Já tentei terapia antes e não funcionou.',
-    resposta: 'A Constelação Familiar Sistêmica vai a um lugar diferente: os padrões que não estão na sua história individual, mas no sistema que você herdou. Muitas pessoas que chegam até mim fizeram anos de terapia e ainda sentiam um núcleo imóvel. É exatamente aí que o trabalho sistêmico atua.',
+    pergunta: 'Já fiz terapia durante anos e ainda me sinto presa.',
+    resposta: 'A Constelação Familiar Sistêmica vai a um lugar diferente. Não atua apenas na sua narrativa individual, mas nos padrões enraizados no sistema em que você nasceu. Por isso muitos clientes relatam que um núcleo que parecia "imóvel" na terapia tradicional finalmente é acessado aqui.',
   },
   {
-    pergunta: 'Funciona online?',
-    resposta: 'Sim. Todas as sessões acontecem por videochamada. O campo sistêmico não precisa de presença física para operar. O que você precisa é de um espaço com privacidade, sem interrupções e com conexão estável.',
+    pergunta: 'É possível fazer o processo 100% online?',
+    resposta: 'Sim. Todo o acompanhamento é por videochamada. A profundidade do campo sistêmico independe de fronteiras físicas. Recomendo apenas que você tenha um espaço de silêncio e privacidade reservado para a hora da nossa sessão.',
   },
   {
-    pergunta: 'Qual é o investimento?',
-    resposta: 'Sei que é uma decisão financeira real. Sei também que o custo de permanecer num padrão que adoece, que desgasta relacionamentos e que mantém você distante de si mesma é um custo que o corpo e a vida cobram de outras formas. Na conversa inicial, a gente fala sobre formatos e valores com transparência.',
+    pergunta: 'Quanto tempo até começar a ver resultados práticos?',
+    resposta: 'Muitos padrões profundos começam a ser reconhecidos logo nas primeiras reuniões. A maioria inicia uma mudança contínua de postura na sua rotina entre a 4ª e 8ª sessão. O importante é saber que o primeiro passo para isso tem data para acontecer.',
   },
   {
-    pergunta: 'Quanto tempo leva o processo?',
-    resposta: 'A maioria das pessoas começa a perceber mudanças concretas de postura e de padrão entre a 4ª e a 8ª sessão. O começo tem uma data. E ele está a uma conversa de distância.',
+    pergunta: 'Nunca fiz terapia. Esse método é indicado para mim?',
+    resposta: 'Não é necessária nenhuma vivência prévia ou conhecimento técnico sobre terapias. Você só precisa ter a disposição interna de olhar honestamente e sair do lugar que te machuca.',
   },
   {
-    pergunta: 'Nunca fiz terapia. Por onde começo?',
-    resposta: 'Pela conversa inicial. Não precisa ter experiência prévia. O que importa é a disposição para olhar honestamente para o que você está carregando. O resto eu te acompanho.',
-  },
-  {
-    pergunta: 'Constelação Familiar é misticismo ou tem base técnica?',
-    resposta: 'Tem base técnica. É uma abordagem desenvolvida por Bert Hellinger, com décadas de aplicação clínica. Trabalha com dinâmicas que regem sistemas familiares e como padrões se transmitem de geração em geração. Não requer crença religiosa. Requer disposição para ver.',
+    pergunta: 'Tem algum vínculo místico ou religioso?',
+    resposta: 'Não. Trata-se de uma abordagem sistêmica fundamentada com foco técnico clínico (desenvolvida originalmente por Bert Hellinger). É o estudo das dinâmicas silenciosas do seu sistema familiar.',
   },
 ]
 
-function FAQItem({ pergunta, resposta }: { pergunta: string; resposta: string }) {
-  const [open, setOpen] = useState(false)
-
+function FAQItem({ pergunta, resposta, isOpen, onToggle }: { pergunta: string; resposta: string, isOpen: boolean, onToggle: () => void }) {
   return (
-    <div style={{ borderBottom: '1px solid rgba(30,14,26,0.15)' }}>
+    <div 
+      style={{ 
+        backgroundColor: isOpen ? '#FFFFFF' : 'transparent',
+        border: '1px solid',
+        borderColor: isOpen ? 'rgba(132,28,98,0.15)' : 'rgba(30,14,26,0.08)',
+        borderRadius: '4px',
+        marginBottom: '12px',
+        transition: 'all 0.4s ease',
+        boxShadow: isOpen ? '0 15px 35px rgba(30,14,26,0.03)' : 'none'
+      }}
+    >
       <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between gap-4 py-5 text-left"
+        onClick={onToggle}
+        className="w-full flex items-center justify-between gap-4 py-5 md:py-6 px-6 md:px-8 text-left"
         style={{ background: 'none', border: 'none', cursor: 'pointer' }}
-        aria-expanded={open}
+        aria-expanded={isOpen}
       >
         <span
           style={{
-            fontFamily: '"Inter", ui-sans-serif, system-ui, sans-serif',
+            fontFamily: '"Playfair Display", ui-serif, Georgia, serif',
             fontWeight: 600,
-            fontSize: '1rem',
-            color: '#1E0E1A',
-            lineHeight: 1.5,
+            fontSize: 'clamp(1rem, 1.5vw, 1.15rem)',
+            color: isOpen ? '#841C62' : '#1E0E1A',
+            lineHeight: 1.4,
+            transition: 'color 0.3s ease'
           }}
         >
           {pergunta}
         </span>
-        <span
+        <div
+          className="flex items-center justify-center rounded-full flex-shrink-0"
           style={{
-            color: '#841C62',
-            flexShrink: 0,
-            display: 'inline-flex',
-            transition: 'transform 0.3s ease',
-            transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
+            width: '32px',
+            height: '32px',
+            backgroundColor: isOpen ? '#841C62' : 'transparent',
+            border: isOpen ? 'none' : '1px solid rgba(30,14,26,0.15)',
+            color: isOpen ? '#FFFFFF' : '#1E0E1A',
+            transition: 'all 0.3s ease',
+            transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
           }}
         >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 7.5l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 1V13M1 7H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        </span>
+        </div>
       </button>
 
       <AnimatePresence initial={false}>
-        {open && (
+        {isOpen && (
           <motion.div
             key="content"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             style={{ overflow: 'hidden' }}
           >
-            <p
-              style={{
-                fontFamily: '"Inter", ui-sans-serif, system-ui, sans-serif',
-                fontSize: '0.95rem',
-                color: '#1E0E1A',
-                opacity: 0.78,
-                lineHeight: 1.75,
-                margin: 0,
-                paddingBottom: '1.25rem',
-              }}
-            >
-              {resposta}
-            </p>
+            <div className="px-6 md:px-8 pb-6 md:pb-8 pt-2">
+              <p
+                style={{
+                  fontFamily: '"Inter", ui-sans-serif, system-ui, sans-serif',
+                  fontSize: '0.95rem',
+                  color: '#1E0E1A',
+                  opacity: 0.8,
+                  lineHeight: 1.8,
+                  margin: 0,
+                }}
+              >
+                {resposta}
+              </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -99,75 +108,109 @@ function FAQItem({ pergunta, resposta }: { pergunta: string; resposta: string })
 }
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
+
   return (
-    <section style={{ backgroundColor: '#F2EBF0' }} className="section-padding">
-      <div className="container-ultra">
+    <section style={{ backgroundColor: '#F2EBF0' }} className="section-padding relative">
+      <div className="container-ultra relative z-10">
 
         <FadeIn className="text-center mb-16">
-          <span className="eyebrow-ultra block mb-4" style={{ color: '#841C62' }}>
-            Perguntas frequentes
+          <span className="eyebrow-ultra block mb-4" style={{ color: '#841C62', letterSpacing: '0.25em' }}>
+            Esclarecimentos
           </span>
           <h2
             style={{
               fontFamily: '"Playfair Display", ui-serif, Georgia, serif',
-              fontWeight: 700,
-              fontStyle: 'italic',
+              fontWeight: 600,
               color: '#1E0E1A',
-              fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
               lineHeight: 1.2,
               margin: 0,
             }}
           >
-            O que você precisa saber antes de começar
+            O que você precisa saber <span style={{ fontStyle: 'italic', color: '#841C62' }}>antes de começar.</span>
           </h2>
         </FadeIn>
 
-        {/* Accordion */}
+        {/* Accordion Ultra Premium */}
         <FadeIn>
-          <div className="max-w-2xl mx-auto mb-20">
-            {faqs.map((faq) => (
-              <FAQItem key={faq.pergunta} pergunta={faq.pergunta} resposta={faq.resposta} />
+          <div className="max-w-3xl mx-auto mb-28">
+            {faqs.map((faq, index) => (
+              <FAQItem 
+                key={faq.pergunta} 
+                pergunta={faq.pergunta} 
+                resposta={faq.resposta} 
+                isOpen={openIndex === index}
+                onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+              />
             ))}
           </div>
         </FadeIn>
 
-        {/* CTA Final */}
-        <FadeIn delay={0.1} className="text-center">
-          <div className="max-w-xl mx-auto flex flex-col items-center gap-6">
-            <h3
-              style={{
-                fontFamily: '"Playfair Display", ui-serif, Georgia, serif',
-                fontWeight: 700,
-                fontStyle: 'italic',
-                color: '#1E0E1A',
-                fontSize: 'clamp(1.4rem, 2.8vw, 2rem)',
-                lineHeight: 1.25,
-                margin: 0,
-              }}
+        {/* CTA Final Glassmorphism VIP Card */}
+        <FadeIn delay={0.2}>
+          <div className="max-w-4xl mx-auto p-1 relative rounded-sm bg-gradient-to-b from-[#841C62]/10 to-transparent">
+            <div 
+              className="bg-white rounded-sm p-12 md:p-20 text-center flex flex-col items-center gap-8 relative overflow-hidden shadow-2xl"
+              style={{ boxShadow: '0 40px 80px rgba(30,14,26,0.06)' }}
             >
-              Você não precisa continuar sendo forte do jeito que te ensinou a ser.
-            </h3>
-            <p
-              style={{
-                fontFamily: '"Inter", ui-sans-serif, system-ui, sans-serif',
-                fontSize: '1rem',
-                color: '#1E0E1A',
-                opacity: 0.78,
-                lineHeight: 1.8,
-                margin: 0,
-              }}
-            >
-              Não precisa ter certeza para começar. Precisa só de uma coisa: a honestidade de reconhecer que o estado em que você está não é o estado em que você quer continuar. A conversa inicial não compromete nada. Não é um contrato. É um encontro. Se algo no que você leu aqui soou como verdade, isso já é suficiente para dar o próximo passo.
-            </p>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-shimmer rounded-sm font-sans text-sm tracking-widest uppercase"
-              style={{ backgroundColor: '#841C62', color: '#F5F0F2' }}
-            >
-              Agendar minha conversa inicial
-            </a>
+              
+              <div className="w-16 h-16 bg-[#F2EBF0] rounded-full flex items-center justify-center mb-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: '#841C62' }}>
+                   <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                   <path d="M12 16V12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                   <path d="M12 8H12.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+
+              <h3
+                style={{
+                  fontFamily: '"Playfair Display", ui-serif, Georgia, serif',
+                  fontWeight: 600,
+                  color: '#1E0E1A',
+                  fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)',
+                  lineHeight: 1.25,
+                  margin: 0,
+                }}
+              >
+                Você não precisa continuar sendo forte do <span style={{ fontStyle: 'italic', color: '#841C62' }}>mesmo jeito.</span>
+              </h3>
+              
+              <p
+                style={{
+                  fontFamily: '"Inter", ui-sans-serif, system-ui, sans-serif',
+                  fontSize: '1.05rem',
+                  color: '#1E0E1A',
+                  opacity: 0.75,
+                  lineHeight: 1.8,
+                  margin: 0,
+                  maxWidth: '600px'
+                }}
+              >
+                Não cobro perfeição para começar. Exijo só o compromisso de quem chegou a um limite. A nossa conversa inicial é para isso: mapear se este caminho é pra você agora.
+              </p>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-shimmer mt-4"
+                style={{ 
+                  backgroundColor: '#841C62', 
+                  color: '#F5F0F2',
+                  padding: '1.25rem 2.5rem',
+                  borderRadius: '4px',
+                  fontFamily: '"Inter", sans-serif',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  fontSize: '0.9rem',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 10px 25px rgba(132,28,98,0.3)'
+                }}
+              >
+                Agendar minha conversa inicial
+              </a>
+            </div>
           </div>
         </FadeIn>
 

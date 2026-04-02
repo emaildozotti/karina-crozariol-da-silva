@@ -13,184 +13,147 @@ export default function Hero() {
 
   return (
     <section
-      style={{ backgroundColor: '#4B0434' }}
+      style={{ backgroundColor: '#FAF7F9' }}
       className="relative min-h-screen overflow-hidden flex flex-col"
     >
-      {/* Aurora blobs */}
+      {/* Soft background glow */}
       <div
-        className="absolute top-[-10%] left-[-5%] w-[55%] h-[60%] rounded-full blur-3xl pointer-events-none"
+        className="absolute top-[-20%] right-[-10%] w-[60%] h-[70%] rounded-full blur-[120px] pointer-events-none"
         style={{
-          background: '#841C6259',
-          animation: 'aurora-1 12s ease-in-out infinite',
+          background: 'radial-gradient(circle, rgba(132,28,98,0.15) 0%, transparent 70%)',
         }}
       />
-      <div
-        className="absolute bottom-[-10%] right-[-5%] w-[50%] h-[55%] rounded-full blur-3xl pointer-events-none"
-        style={{
-          background: '#3C7D3C45',
-          animation: 'aurora-2 15s ease-in-out infinite',
-        }}
-      />
-      <div
-        className="absolute top-[40%] left-[30%] w-[40%] h-[40%] rounded-full blur-3xl pointer-events-none"
-        style={{
-          background: '#F5F0F228',
-          animation: 'aurora-3 18s ease-in-out infinite',
-        }}
-      />
-
-      {/* Watermark */}
-      <span
-        className="absolute select-none pointer-events-none"
-        style={{
+      
+      {/* Header */}
+      <header className="absolute top-0 w-full z-50 px-8 lg:px-16 py-8 flex items-center justify-between">
+        <div style={{
           fontFamily: '"Cormorant Garamond", ui-serif, Georgia, serif',
-          fontWeight: 300,
-          fontStyle: 'italic',
-          fontSize: 'clamp(2rem, 5vw, 4rem)',
-          color: '#F5F0F2',
-          opacity: 0.05,
-          transform: 'rotate(-15deg)',
-          top: '30%',
-          left: '5%',
-          whiteSpace: 'nowrap',
-          zIndex: 1,
-        }}
-      >
-        precisão cirúrgica da alma
-      </span>
-
-      {/* Sticky header — desktop only */}
-      <header className="hidden md:flex sticky top-0 z-50 w-full items-center justify-between px-8 py-4"
-        style={{ backgroundColor: 'rgba(75,4,52,0.85)', backdropFilter: 'blur(12px)' }}
-      >
-        <span
-          style={{
-            fontFamily: '"Playfair Display", ui-serif, Georgia, serif',
-            fontStyle: 'italic',
-            fontSize: '1rem',
-            color: '#F5F0F2',
-            letterSpacing: '0.02em',
-          }}
-        >
-          Karina Crozariol | Expressão do Ser
-        </span>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-shimmer rounded-sm font-sans text-xs tracking-widest uppercase"
-          style={{ backgroundColor: '#841C62', color: '#F5F0F2', fontSize: '0.7rem' }}
-        >
-          Agendar conversa
-        </a>
+          fontSize: '1.25rem',
+          color: '#4B0434',
+          fontWeight: 600,
+          letterSpacing: '0.05em'
+        }}>
+          Karina Crozariol
+        </div>
       </header>
 
       {/* Main hero content */}
-      <div className="container-ultra relative z-10 flex-1 flex items-center py-20 md:py-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center w-full">
-
-          {/* Left: copy */}
-          <div className="flex flex-col gap-6">
-            <FadeIn delay={0}>
-              <span className="eyebrow-ultra" style={{ color: '#3C7D3C' }}>
-                TRAVADA POR DENTRO
+      <div className="container-ultra relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-center pt-24 pb-12 lg:py-0">
+        
+        <div className="w-full lg:w-1/2 flex flex-col gap-8 pr-0 lg:pr-16 z-20">
+          <FadeIn delay={0}>
+            <div className="flex items-center gap-4">
+              <div style={{ width: '40px', height: '1px', backgroundColor: '#3C7D3C' }}></div>
+              <span style={{ 
+                fontFamily: '"Inter", sans-serif', 
+                fontSize: '0.75rem', 
+                fontWeight: 600, 
+                letterSpacing: '0.25em', 
+                textTransform: 'uppercase', 
+                color: '#3C7D3C' 
+              }}>
+                Identidade & Postura
               </span>
-            </FadeIn>
+            </div>
+          </FadeIn>
 
-            <FadeIn delay={0.15}>
-              <h1
-                style={{
-                  fontFamily: '"Playfair Display", ui-serif, Georgia, serif',
-                  fontWeight: 700,
-                  fontStyle: 'italic',
-                  color: '#F5F0F2',
-                  lineHeight: 1.15,
-                  fontSize: 'clamp(2.2rem, 5vw, 3.8rem)',
-                  margin: 0,
+          <FadeIn delay={0.15}>
+            <h1
+              style={{
+                fontFamily: '"Playfair Display", ui-serif, Georgia, serif',
+                fontWeight: 600,
+                color: '#1E0E1A',
+                lineHeight: 1.15,
+                fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
+                margin: 0,
+              }}
+            >
+              Você aprendeu<br /> 
+              a ser <span style={{ fontStyle: 'italic', color: '#841C62' }}>forte.</span><br />
+              O corpo cobra.
+            </h1>
+          </FadeIn>
+
+          <FadeIn delay={0.30}>
+            <p
+              style={{
+                fontFamily: '"Cormorant Garamond", ui-serif, Georgia, serif',
+                fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)',
+                color: '#4B0434',
+                opacity: 0.85,
+                lineHeight: 1.6,
+                margin: 0,
+                maxWidth: '480px'
+              }}
+            >
+              Um processo cirúrgico de limpeza sistêmica para quem precisa resgatar a própria essência sem perder quem ama.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.45}>
+            <div className="flex items-center gap-6 mt-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-shimmer"
+                style={{ 
+                  backgroundColor: '#841C62', 
+                  color: '#FFFFFF', 
+                  borderRadius: '2px',
+                  fontFamily: '"Inter", sans-serif', 
+                  fontSize: '0.8rem', 
+                  letterSpacing: '0.15em', 
+                  textTransform: 'uppercase',
+                  fontWeight: 500
                 }}
               >
-                Você aprendeu a ser forte. O corpo cobra.
-              </h1>
-            </FadeIn>
-
-            <FadeIn delay={0.30}>
-              <p
-                style={{
-                  fontFamily: '"Cormorant Garamond", ui-serif, Georgia, serif',
-                  fontWeight: 300,
-                  fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)',
-                  color: '#F5F0F2',
-                  opacity: 0.88,
-                  lineHeight: 1.5,
-                  margin: 0,
-                }}
-              >
-                Um caminho de volta para si, sem perder quem ama.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={0.45}>
+                Agendar Conversa
+              </a>
               <a
                 href="#dores"
                 onClick={handleScrollToDores}
-                className="btn-shimmer rounded-sm font-sans text-sm tracking-widest uppercase"
-                style={{ backgroundColor: '#841C62', color: '#F5F0F2', alignSelf: 'flex-start' }}
+                style={{ 
+                  fontFamily: '"Inter", sans-serif', 
+                  fontSize: '0.8rem', 
+                  letterSpacing: '0.1em', 
+                  textTransform: 'uppercase',
+                  color: '#4B0434',
+                  fontWeight: 500,
+                  textDecoration: 'none',
+                  borderBottom: '1px solid currentColor',
+                  paddingBottom: '2px'
+                }}
+                className="hover:opacity-70 transition-opacity"
               >
-                Quero entender como
+                Como Funciona
               </a>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
+        </div>
 
-          {/* Right: photo */}
-          <div className="relative flex justify-center md:justify-end">
-            <div className="relative overflow-hidden rounded-sm w-full max-w-[440px]"
-              style={{ aspectRatio: '3/4' }}
+        {/* Right: photo */}
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-16 lg:mt-0 relative">
+          <FadeIn delay={0.2} className="w-full max-w-[500px]">
+             {/* Decorative Background Frame */}
+            <div className="absolute top-8 left-8 right-[-2rem] bottom-[-2rem] border border-primary opacity-20 z-0 hidden lg:block" />
+            
+            <div className="relative overflow-hidden w-full z-10 shadow-[0_20px_50px_rgba(75,4,52,0.15)]"
+              style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="/images/karina-01.jpg"
+                src="https://i.imgur.com/fqs40xA.jpeg"
                 alt="Karina Crozariol"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement
-                  target.style.display = 'none'
-                  const parent = target.parentElement
-                  if (parent && !parent.querySelector('.placeholder-svg')) {
-                    const div = document.createElement('div')
-                    div.className = 'placeholder-svg w-full h-full flex items-center justify-center'
-                    div.style.cssText = 'background:linear-gradient(135deg,#841C62 0%,#4B0434 100%);'
-                    div.innerHTML = `<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="28" r="16" stroke="#F5F0F2" stroke-width="2" stroke-opacity="0.5"/><path d="M8 72c0-17.673 14.327-32 32-32s32 14.327 32 32" stroke="#F5F0F2" stroke-width="2" stroke-opacity="0.5"/></svg>`
-                    parent.appendChild(div)
-                  }
-                }}
+                className="w-full h-full object-cover object-top"
               />
-              {/* Treatment B: magenta gradient overlay at base */}
+              {/* Subtle inner shadow overlay */}
               <div
-                className="absolute bottom-0 left-0 right-0 h-2/5 pointer-events-none"
-                style={{
-                  background: 'linear-gradient(to top, rgba(132,28,98,0.18) 0%, transparent 100%)',
-                }}
+                className="absolute inset-0 pointer-events-none"
+                style={{ boxShadow: 'inset 0 0 40px rgba(0,0,0,0.1)' }}
               />
             </div>
-          </div>
+          </FadeIn>
         </div>
-      </div>
-
-      {/* Scroll indicator — desktop only */}
-      <div className="hidden md:flex justify-center pb-8 relative z-10">
-        <a
-          href="#dores"
-          onClick={handleScrollToDores}
-          style={{ color: '#F5F0F2', opacity: 0.4 }}
-          className="flex flex-col items-center gap-2 hover:opacity-70 transition-opacity"
-          aria-label="Rolar para baixo"
-        >
-          <span style={{ fontFamily: '"Inter", sans-serif', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-            continuar
-          </span>
-          <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 4v16M2 14l6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </a>
       </div>
     </section>
   )
