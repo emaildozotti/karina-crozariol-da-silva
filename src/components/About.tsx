@@ -114,7 +114,7 @@ export default function About() {
               style={{ maxWidth: '420px', aspectRatio: '3/4' }}
             >
               <img
-                src="[ABOUT_IMAGE_URL]"
+                src="/images/karina-02.jpg"
                 alt="Karina Crozariol"
                 className="w-full h-full object-cover"
                 onError={(e) => {

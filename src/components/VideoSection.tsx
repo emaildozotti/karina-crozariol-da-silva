@@ -1,6 +1,6 @@
 import { FadeIn } from '../App'
 
-const YOUTUBE_VIDEO_ID = '[YOUTUBE_VIDEO_ID]'
+const YOUTUBE_VIDEO_ID = 'H6GpOMOoP4E'
 
 export default function VideoSection() {
   return (

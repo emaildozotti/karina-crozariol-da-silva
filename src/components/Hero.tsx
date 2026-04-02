@@ -147,7 +147,7 @@ export default function Hero() {
               style={{ aspectRatio: '3/4' }}
             >
               <img
-                src="[HERO_IMAGE_URL]"
+                src="/images/karina-01.jpg"
                 alt="Karina Crozariol"
                 className="w-full h-full object-cover"
                 onError={(e) => {
