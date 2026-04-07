@@ -142,7 +142,7 @@ export default function Hero() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="https://i.imgur.com/kagS4x7.jpeg"
+                src="/images/hero.jpeg"
                 alt="Karina Crozariol"
                 className="w-full h-full object-cover object-top"
               />

@@ -97,7 +97,7 @@ export default function About() {
                 style={{ maxWidth: '460px', aspectRatio: '4/5', margin: '0 auto' }}
               >
                 <img
-                  src="https://i.imgur.com/YIkxZTe.jpeg"
+                  src="/images/about.jpeg"
                   alt="Karina Crozariol"
                   className="w-full h-full object-cover"
                 />
