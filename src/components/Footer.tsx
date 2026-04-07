@@ -64,7 +64,7 @@ export default function Footer() {
           >
             Terapeuta Sistêmica, Consteladora Familiar &amp; Orientadora.
             <br />
-            Precisão de diagnóstico clínico para uma expressão autêntica.
+            Precisão de diagnóstico para uma expressão mais autêntica de você.
           </p>
         </FadeIn>
 

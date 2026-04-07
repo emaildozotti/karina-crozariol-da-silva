@@ -3,11 +3,11 @@ import { FadeIn } from '../App'
 const dores = [
   {
     num: '01',
-    text: 'Faço de tudo para agradar todo mundo e no final não sei nem o que eu gosto de verdade',
+    text: 'Faço de tudo para agradar todo mundo e no final não sei nem o que é escolha minha de verdade',
   },
   {
     num: '02',
-    text: 'Meu corpo tá doendo sem motivo que médico consiga explicar',
+    text: 'Meu corpo todo dói sem motivo que médico consiga explicar',
   },
   {
     num: '03',
@@ -15,7 +15,7 @@ const dores = [
   },
   {
     num: '04',
-    text: 'Tenho medo que se eu for eu mesma de verdade, as pessoas que amo vão me abandonar',
+    text: 'Tenho medo de que se eu for eu mesmo de verdade, possa afastar as pessoas que amo',
   },
 ]
 
@@ -38,7 +38,7 @@ export default function PainPoints() {
               margin: 0,
             }}
           >
-            Sinais de um corpo que <span style={{ fontStyle: 'italic', color: '#841C62' }}>fragmenta em silêncio.</span>
+            Sinais de um corpo que <span style={{ fontStyle: 'italic', color: '#841C62' }}>Adoece em silêncio.</span>
           </h2>
           <p
             style={{

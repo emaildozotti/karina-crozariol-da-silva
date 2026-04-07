@@ -86,7 +86,7 @@ export default function Hero() {
                 maxWidth: '480px'
               }}
             >
-              Um processo cirúrgico de limpeza sistêmica para quem precisa resgatar a própria essência sem perder quem ama.
+              Um processo cirúrgico de ALINHAMENTO sistêmico para quem precisa resgatar a própria essência sem sentir que pode perder quem ama.
             </p>
           </FadeIn>
 
@@ -142,7 +142,7 @@ export default function Hero() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="https://i.imgur.com/fqs40xA.jpeg"
+                src="https://i.imgur.com/kagS4x7.jpeg"
                 alt="Karina Crozariol"
                 className="w-full h-full object-cover object-top"
               />

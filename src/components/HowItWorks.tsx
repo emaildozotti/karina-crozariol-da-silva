@@ -4,25 +4,25 @@ const passos = [
   {
     num: '01',
     titulo: 'Conversa Inicial',
-    texto: 'Antes de qualquer sessão, a gente se encontra para entender onde você está. Não é triagem. É o começo do diagnóstico. Quero ouvir o que você carrega, onde sente e o que já tentou. A partir daí, a gente define juntas.',
+    texto: 'Antes de qualquer sessão, a gente se encontra online para entender onde você está. Não é triagem. É o começo do diagnóstico. Quero ouvir onde sua vida travou, o que você sente e o que já tentou. A partir daí, a gente define juntos.',
   },
   {
     num: '02',
     titulo: 'As Sessões',
-    texto: 'As sessões acontecem online, em espaço privado, com combinação de vivência sistêmica e orientação processual. Não existe um protocolo único porque cada sistema é diferente.',
+    texto: 'As sessões, depois desta conversa, acontecem presencial ou online, em espaço privado, com combinação de vivência sistêmica e orientação processual. Não existe um protocolo único porque cada sistema é diferente.',
   },
   {
     num: '03',
     titulo: 'A Transformação',
-    texto: 'Não é um insight isolado. É uma mudança de postura interna que se instala no cotidiano. Você percebe padrões antes de entrar neles. Reconhece sua voz nos momentos em que ela costumava sumir.',
+    texto: 'Não é um insight isolado. É uma mudança de postura interna que se instala na sua vida! Você passa a perceber padrões antes de entrar neles. Reconhece agora o que faz sentido para você e passa a escolher e não mais a repetir.',
   },
 ]
 
 const desmistificacao = [
-  'Constelação Familiar é uma abordagem terapêutica sistêmica. Sem viés religioso.',
-  'A vivência sistêmica não depende de narrativa detalhada.',
-  'O processo oferece clareza. O que você faz com ela é escolha sua.',
-  'Funciona online com total precisão.',
+  'Constelação é uma abordagem terapêutica sistêmica baseada nos padrões de repetição da nossa família. Sem viés religioso.',
+  'A vivência sistêmica não depende de narrativa detalhada, apenas de conexão!',
+  'O processo oferece clareza e você pode então fazer novas escolhas!',
+  'Funciona online com total precisão, tanto quanto presencial.',
 ]
 
 export default function HowItWorks() {
@@ -195,7 +195,7 @@ export default function HowItWorks() {
                     paddingTop: '1.5rem'
                   }}
                 >
-                  Não exijo que saiba o método, apenas disposição verdadeira para curar a raiz.
+                  Não é necessário saber o método, apenas ter disposição verdadeira para curar a raiz.
                 </p>
             </div>
             

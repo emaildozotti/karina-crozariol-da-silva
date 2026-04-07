@@ -3,7 +3,7 @@ import { FadeIn } from '../App'
 const credenciais = [
   'Terapeuta Sistêmica e Consteladora Familiar',
   '28 anos de prática clínica em odontologia',
-  'Orientadora de Propósito e Missão de Vida',
+  'Orientadora de Propósito e Missão de Vida há mais de 10 anos',
 ]
 
 export default function About() {
@@ -34,7 +34,7 @@ export default function About() {
                   margin: 0,
                 }}
               >
-                A dentista que aprendeu a curar a alma com a mesma <span style={{ fontStyle: 'italic', color: '#841C62' }}>precisão</span> que curava as dores.
+                A dentista que aprendeu a curar a alma com a mesma <span style={{ fontStyle: 'italic', color: '#841C62' }}>precisão</span> que curava as dores físicas.
               </h2>
             </FadeIn>
 
@@ -48,7 +48,7 @@ export default function About() {
                   margin: 0,
                 }}
               >
-                Por 28 anos, fui dentista. Treinei a precisão como forma de existir. Diagnóstico exato, técnica impecável, presença total para cada paciente. Por fora: tudo funcionando perfeitamente. Por dentro: enxaquecas semanais, dores que mudavam de lugar sem explicação.
+                Há 28 anos, atuando como dentista. Treinei a precisão como forma de existir. Diagnóstico exato, técnica impecável, presença total para cada paciente. Por fora: tudo funcionando perfeitamente. Por dentro: enxaquecas semanais, dores que mudavam de lugar sem explicação.
               </p>
             </FadeIn>
 
@@ -97,7 +97,7 @@ export default function About() {
                 style={{ maxWidth: '460px', aspectRatio: '4/5', margin: '0 auto' }}
               >
                 <img
-                  src="https://i.imgur.com/61ZBqlG.jpeg"
+                  src="https://i.imgur.com/YIkxZTe.jpeg"
                   alt="Karina Crozariol"
                   className="w-full h-full object-cover"
                 />

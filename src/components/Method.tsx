@@ -57,7 +57,7 @@ export default function Method() {
               margin: '0 auto',
             }}
           >
-            Precisão de diagnóstico clínico aplicada ao que o seu corpo e o seu sistema carregam em silêncio. A diferença não está na técnica, mas na exatidão cirúrgica.
+            Precisão na descoberta do que o seu corpo e o seu sistema carregam em silêncio. A diferença não está na técnica, mas na revelação exata da causa raíz.
           </p>
         </FadeIn>
 
@@ -154,7 +154,7 @@ export default function Method() {
                     margin: 0,
                   }}
                 >
-                  "Não prometo que o processo vai ser fácil ou indolor. Prometo que vai ser real. E que o que você encontrar vai ser seu de forma autêntica."
+                  "Não prometo que o processo vai ser fácil ou indolor. Prometo que vai ser real. E que, o que você vai encontrar, é VOCÊ de forma autêntica."
                 </p>
               </blockquote>
             </div>

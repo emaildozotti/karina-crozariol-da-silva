@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     pergunta: 'Quanto tempo até começar a ver resultados práticos?',
-    resposta: 'Muitos padrões profundos começam a ser reconhecidos logo nas primeiras reuniões. A maioria inicia uma mudança contínua de postura na sua rotina entre a 4ª e 8ª sessão. O importante é saber que o primeiro passo para isso tem data para acontecer.',
+    resposta: 'Muitos padrões profundos começam a ser reconhecidos logo nas primeiras reuniões. A maioria inicia uma mudança contínua de postura já na segunda ou terceira sessão. O importante é dar o primeiro passo marcando o encontro inicial.',
   },
   {
     pergunta: 'Nunca fiz terapia. Esse método é indicado para mim?',
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     pergunta: 'Tem algum vínculo místico ou religioso?',
-    resposta: 'Não. Trata-se de uma abordagem sistêmica fundamentada com foco técnico clínico (desenvolvida originalmente por Bert Hellinger). É o estudo das dinâmicas silenciosas do seu sistema familiar.',
+    resposta: 'Não. Trata-se de uma abordagem sistêmica (desenvolvida originalmente por Bert Hellinger), fundamentada em identificar as dinâmicas silenciosas do seu sistema familiar que atuam ainda na sua vida de hoje, te ajudando a sair do mesmo enredo.',
   },
 ]
 
@@ -173,7 +173,7 @@ export default function FAQ() {
                   margin: 0,
                 }}
               >
-                Você não precisa continuar sendo forte do <span style={{ fontStyle: 'italic', color: '#841C62' }}>mesmo jeito.</span>
+                Você não precisa continuar aguentando tudo do <span style={{ fontStyle: 'italic', color: '#841C62' }}>mesmo jeito.</span>
               </h3>
               
               <p
@@ -187,7 +187,7 @@ export default function FAQ() {
                   maxWidth: '600px'
                 }}
               >
-                Não cobro perfeição para começar. Exijo só o compromisso de quem chegou a um limite. A nossa conversa inicial é para isso: mapear se este caminho é pra você agora.
+                Nem de perfeição para começar. Só do compromisso de quem chegou a um limite e quer muito avançar. A nossa conversa inicial é para isso: mapear se este caminho é pra você agora.
               </p>
 
               <a
