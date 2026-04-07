@@ -100,6 +100,7 @@ export default function About() {
                   src="/images/about.jpeg"
                   alt="Karina Crozariol"
                   className="w-full h-full object-cover"
+                  style={{ imageRendering: 'auto', backfaceVisibility: 'hidden' }}
                 />
               </div>
             </FadeIn>

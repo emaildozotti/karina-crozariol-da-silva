@@ -145,11 +145,7 @@ export default function Hero() {
                 src="/images/hero.jpeg"
                 alt="Karina Crozariol"
                 className="w-full h-full object-cover object-top"
-              />
-              {/* Subtle inner shadow overlay */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{ boxShadow: 'inset 0 0 40px rgba(0,0,0,0.1)' }}
+                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden' }}
               />
             </div>
           </FadeIn>
