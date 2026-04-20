@@ -2,7 +2,7 @@ import { FadeIn } from '../App'
 
 const credenciais = [
   'Terapeuta Sistêmica e Consteladora Familiar',
-  '28 anos de prática clínica em odontologia',
+  'Dentista há 28 anos',
   'Orientadora de Propósito e Missão de Vida há mais de 10 anos',
 ]
 
@@ -48,7 +48,7 @@ export default function About() {
                   margin: 0,
                 }}
               >
-                Há 28 anos, atuando como dentista. Treinei a precisão como forma de existir. Diagnóstico exato, técnica impecável, presença total para cada paciente. Por fora: tudo funcionando perfeitamente. Por dentro: enxaquecas semanais, dores que mudavam de lugar sem explicação.
+                Dentista há 28 anos. Treinei a precisão como forma de existir. Diagnóstico exato, técnica impecável, presença total para cada paciente. Por fora: tudo funcionando perfeitamente. Por dentro: enxaquecas semanais, dores que mudavam de lugar sem explicação.
               </p>
             </FadeIn>
 
